@@ -1,0 +1,14 @@
+<div class="login">
+  <form class="custom-form" [formGroup]="miFormulario" (ngSubmit)="save()">
+    <h1>Login</h1>
+    <br />
+    <label for="email" class="form-label">Correo Electronico</label>
+    <input type="email" class="form-control" placeholder="user@test.com" id="email" name="email"
+      formControlName="email" />
+    <label for="password" class="form-label">Contraseña</label>
+    <input type="password" class="form-control" placeholder="*******" id="password" name="password"
+      formControlName="password" />
+    <br />
+    <button [disabled]="miFormulario.invalid">Iniciar Sesión</button>
+  </form>
+</div>
